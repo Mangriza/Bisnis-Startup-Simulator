@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bisnis Startup Simulator</title>
+    <!-- CSS Framework untuk tampilan modern -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <!-- Ikon-ikon cantik -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <!-- CSS kustom kita -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .progress-bar-container {
+            background-color: var(--pico-secondary-background);
+            border-radius: 5px;
+            padding: 2px;
+            display: block; 
+        }
+        .progress-bar {
+            height: 20px;
+            background-color: var(--pico-primary); 
+            border-radius: 5px;
+            transition: width 0.3s ease-in-out; 
+            flex-grow: 0 !important;
+            flex-shrink: 0 !important;
+        }
+    </style>
+    <!-- ========================================================== -->
+
+</head>
+<body>
+    <main class="container">
+        <h1>Bisnis Startup Simulator</h1>
+
+        <!-- Kotak Login -->
+        <div id="login-section">
+             <article>
+                <h2 style="text-align: center;">Login</h2>
+                <form id="login-form">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <p id="login-error" class="error-message"></p>
+                <footer>
+                    Belum punya akun? <a href="#" id="show-register-link">Daftar di sini</a>
+                </footer>
+            </article>
+        </div>
+        
+        <!-- Kotak Register (Tersembunyi Awalnya) -->
+        <div id="register-section" class="hidden">
+            <article>
+                <h2 style="text-align: center;">Daftar Akun Baru</h2>
+                <form id="register-form">
+                    <input type="text" id="username-register" placeholder="Username" required>
+                    <input type="email" id="email-register" placeholder="Email" required>
+                    <input type="password" id="password-register" placeholder="Password" required>
+                    <button type="submit">Daftar</button>
+                </form>
+                <p id="register-error" class="error-message"></p>
+                <footer>
+                    Sudah punya akun? <a href="#" id="show-login-link">Login di sini</a>
+                </footer>
+            </article>
+        </div>
+
+        <!-- Kotak Buat Startup (Tersembunyi Awalnya) -->
+        <div id="create-startup-section" class="hidden">
+            <article>
+                <h2 style="text-align: center;">Buat Startup Pertama Anda!</h2>
+                <form id="create-startup-form">
+                    <input type="text" id="startup-name-input" placeholder="Nama Startup Anda" required>
+                    <select id="startup-type-select" required>
+                        <option value="" disabled selected>Pilih Tipe Startup</option>
+                        <option value="Aplikasi Mobile">Aplikasi Mobile</option>
+                        <option value="Toko Online">Toko Online</option>
+                        <option value="Game Studio">Game Studio</option>
+                    </select>
+                    <button type="submit">Mulai Bangun Startup</button>
+                </form>
+            </article>
+        </div>
+
+        <!-- Dashboard Utama (Tersembunyi Awalnya) -->
+        <div id="dashboard-section" class="hidden">
+            <h2 id="startup-name">Nama Startup</h2>
+            <div class="grid">
+                <div class="stat-card"><h3><i data-feather="dollar-sign"></i> Uang Kas</h3><p id="cash-value">$0</p></div>
+                <div class="stat-card"><h3><i data-feather="trending-up"></i> Popularitas</h3><p id="popularity-value">0</p></div>
+                <div class="stat-card"><h3><i data-feather="calendar"></i> Hari Ke-</h3><p id="day-value">1</p></div>
+            </div>
+            <h3>Tim Anda</h3>
+            <div class="grid">
+                <div class="stat-card"><h4><i data-feather="code"></i> Developer</h4><p id="dev-count">0</p></div>
+                <div class="stat-card"><h4><i data-feather="send"></i> Marketer</h4><p id="marketer-count">0</p></div>
+                <div class="stat-card"><h4><i data-feather="pen-tool"></i> Designer</h4><p id="designer-count">0</p></div>
+            </div>
+            <h3>Progres Riset</h3>
+            
+            <div class="progress-bar-container">
+                <div id="research-progress-bar" class="progress-bar" style="width: 0%;"></div>
+            </div>
+
+            <p id="research-progress-text">0%</p>
+            <div class="actions-panel">
+                <h3>Aksi & Rekrutmen</h3>
+                <div class="grid">
+                    <button id="research-btn">Riset Produk</button>
+                    <button id="promote-btn">Promosi</button>
+                    <button id="campaign-btn" class="contrast">Jalankan Kampanye</button>
+                    <button id="nextday-btn">Ganti Hari</button>
+                </div>
+                 <div class="grid">
+                    <button id="hire-dev-btn" class="secondary">Rekrut Developer</button>
+                    <button id="hire-marketer-btn" class="secondary">Rekrut Marketer</button>
+                    <button id="hire-designer-btn" class="secondary">Rekrut Designer</button>
+                </div>
+            </div>
+            <div id="product-list-container">
+                <h3>Produk Anda</h3>
+                <div id="product-list"></div>
+            </div>
+
+            <details>
+                <summary>
+                    <h3 style="display: inline;">Pohon Teknologi</h3>
+                </summary>
+                <div id="tech-tree-container" class="grid">
+                    <!-- Tech Tree akan diisi oleh JavaScript -->
+                </div>
+            </details>
+        </div> 
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

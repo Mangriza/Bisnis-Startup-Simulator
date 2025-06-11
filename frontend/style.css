@@ -1,0 +1,185 @@
+/* style.css */
+body { font-family: sans-serif; background-color: #121212; color: #e0e0e0; margin: 0; padding: 20px; }
+.container { max-width: 800px; margin: auto; }
+h1, h2 { text-align: center; color: #bb86fc; }
+form { display: flex; flex-direction: column; gap: 10px; }
+input, button { padding: 10px; border-radius: 5px; border: 1px solid #333; background-color: #1e1e1e; color: #e0e0e0; }
+button { background-color: #03dac6; color: #121212; font-weight: bold; cursor: pointer; }
+.hidden { display: none; }
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-bottom: 20px; }
+.stat-card { background-color: #1e1e1e; padding: 20px; border-radius: 8px; text-align: center; border-left: 4px solid #bb86fc; }
+.stat-card h3 { margin-top: 0; }
+.progress-bar-container { width: 100%; background-color: #333; border-radius: 5px; }
+.progress-bar { height: 20px; width: 0%; background-color: #03dac6; border-radius: 5px; transition: width 0.5s ease; }
+.error-message { color: #cf6679; text-align: center; }
+
+/* ... di paling bawah style.css ... */
+.actions-panel {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.action-buttons button {
+    background-color: #3700b3;
+    font-size: 14px;
+}
+
+.action-buttons button:hover {
+    background-color: #4a148c;
+}
+
+/* ... di paling bawah style.css ... */
+#product-list-container {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+#product-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.product-item {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.upgrade-btn {
+    background-color: #018786;
+    padding: 8px 12px;
+    font-size: 12px;
+}
+.upgrade-btn:hover {
+    background-color: #03dac6;
+}
+
+/* Styling untuk Tech Tree */
+#tech-tree-container article {
+    text-align: center;
+    border-left-width: 4px;
+    border-left-style: solid;
+}
+
+/* Teknologi yang masih terkunci */
+.tech-locked {
+    border-left-color: var(--pico-muted-border-color);
+    opacity: 0.6;
+}
+.tech-locked button {
+    display: none; /* Sembunyikan tombol riset */
+}
+
+/* Teknologi yang bisa diriset */
+.tech-available {
+    border-left-color: var(--pico-primary);
+}
+
+/* Teknologi yang sudah dimiliki */
+.tech-unlocked {
+    border-left-color: var(--pico-color-green);
+}
+.tech-unlocked button {
+    background-color: var(--pico-color-green);
+    color: var(--pico-secondary-inverse);
+    pointer-events: none; /* Tombol tidak bisa diklik */
+}
+/* style.css */
+
+/* === PERBAIKAN UTAMA: MEMPERLEBAR CONTAINER === */
+main.container {
+    max-width: 1280px; /* Dari default 1120px, kita buat lebih lega */
+    padding: 2rem;
+}
+/* =============================================== */
+
+
+body { 
+    font-family: sans-serif; 
+}
+
+h1, h2 { 
+    text-align: center;
+}
+
+.stat-card {
+    text-align: center; 
+    border-left: 4px solid var(--pico-primary); 
+    padding: 1.5rem;
+}
+
+.stat-card h3, .stat-card h4 { 
+    margin-top: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.progress-bar-container { 
+    width: 100%; 
+    background-color: #333; 
+    border-radius: 5px; 
+}
+
+.actions-panel {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--pico-secondary-background);
+}
+
+#product-list-container, details {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--pico-secondary-background);
+}
+
+.error-message { 
+    color: var(--pico-color-red-500); 
+    text-align: center; 
+}
+
+/* === PERBAIKAN UNTUK TECH TREE === */
+#tech-tree-container {
+    /* Membuat grid lebih fleksibel dan lebar */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+#tech-tree-container article {
+    text-align: center;
+    border-left-width: 4px;
+    border-left-style: solid;
+}
+
+.tech-locked {
+    border-left-color: var(--pico-muted-border-color);
+    opacity: 0.6;
+}
+.tech-locked button {
+    display: none;
+}
+
+.tech-available {
+    border-left-color: var(--pico-primary);
+}
+
+.tech-unlocked {
+    border-left-color: var(--pico-color-green);
+}
+.tech-unlocked button {
+    background-color: var(--pico-color-green);
+    color: var(--pico-secondary-inverse);
+    pointer-events: none;
+}
