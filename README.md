@@ -1,29 +1,22 @@
 Bisnis Startup Simulator 🚀
 Sebuah game simulasi bisnis (Tycoon) berbasis web di mana Anda membangun startup digital dari nol, bersaing dengan AI, dan membuat keputusan strategis untuk menguasai pasar.
 
+![alt text](<Gambar WhatsApp 2025-06-12 pukul 01.12.27_3fa5d70d.jpg>)
 
 
 Deskripsi Proyek
 "Bisnis Startup Simulator" adalah game simulasi strategis yang menantang pemain untuk menjadi seorang CEO. Anda akan memulai dengan modal terbatas dan sebuah ide, lalu mengembangkannya menjadi perusahaan raksasa. Gameplay berfokus pada manajemen sumber daya, pengembangan produk melalui pohon teknologi, rekrutmen tim, dan menghadapi dinamika pasar seperti event acak dan persaingan ketat. Proyek ini dibangun sepenuhnya menggunakan arsitektur full-stack dengan Node.js di backend dan Vanilla JavaScript di frontend.
 
 Fitur Utama
-Sistem Login & Register: Akun pemain yang aman dengan authentikasi berbasis token (JWT).
-
-Manajemen Startup: Kelola Uang Kas, Popularitas, dan Tim (Developer, Marketer, Designer).
-
-Pengembangan Produk: Lakukan riset untuk menciptakan produk baru dengan nama yang dihasilkan secara dinamis.
-
-Sistem Level & Upgrade: Tingkatkan level produk untuk menaikkan pendapatan harian.
-
-Pohon Teknologi (Tech Tree): Buka teknologi baru untuk mendapatkan kemampuan dan keuntungan strategis.
-
-Aksi Tim Spesialis: Gunakan Marketer untuk kampanye iklan atau Designer untuk mendesain ulang produk.
-
-Event Acak: Hadapi kejadian tak terduga yang bisa menguntungkan atau merugikan startup Anda.
-
-AI Competitor (Konsep): Sistem pesaing "Nexus Corp" yang membuat permainan lebih menantang.
-
-UI Modern: Tampilan bersih dan responsif menggunakan CSS Framework Pico.css dan ikon dari Feather Icons.
+1. Sistem Login & Register: Akun pemain yang aman dengan authentikasi berbasis token (JWT).
+2. Manajemen Startup: Kelola Uang Kas, Popularitas, dan Tim (Developer, Marketer, Designer).
+3. Pengembangan Produk: Lakukan riset untuk menciptakan produk baru dengan nama yang dihasilkan secara dinamis.
+4. Sistem Level & Upgrade: Tingkatkan level produk untuk menaikkan pendapatan harian.
+5. Pohon Teknologi (Tech Tree): Buka teknologi baru untuk mendapatkan kemampuan dan keuntungan strategis.
+6. Aksi Tim Spesialis: Gunakan Marketer untuk kampanye iklan atau Designer untuk mendesain ulang produk.
+7. Event Acak: Hadapi kejadian tak terduga yang bisa menguntungkan atau merugikan startup Anda.
+8. AI Competitor (Konsep): Sistem pesaing "Nexus Corp" yang membuat permainan lebih menantang.
+9. UI Modern: Tampilan bersih dan responsif menggunakan CSS Framework Pico.css dan ikon dari Feather Icons.
 
 Tumpukan Teknologi (Tech Stack)
 Backend
