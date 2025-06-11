@@ -50,17 +50,15 @@ Git ter-install.
 Akun MongoDB Atlas untuk database (tersedia paket gratis).
 
 1. Clone Repositori
-git clone https://github.com/NAMA_USER_ANDA/NAMA_REPO_ANDA.git
-cd NAMA_REPO_ANDA
+git clone https://github.com/Mangriza/Bisnis-Startup-Simulator.git
+cd Bisnis-Startup-Simulator
 
 2. Setup Backend
-Masuk ke folder backend (jika struktur Anda memisahkannya, jika tidak lewati langkah ini).
-
 Install semua dependensi:
 
 npm install
 
-Buat file .env: Salin file .env.example (jika ada) atau buat file baru bernama .env di root folder backend.
+Buat file .env: Buat file baru bernama .env di folder utama proyek.
 
 Isi file .env dengan variabel yang dibutuhkan:
 
@@ -92,4 +90,4 @@ Kontribusi
 Kontribusi, isu, dan permintaan fitur sangat diterima! Jangan ragu untuk membuat fork dari proyek ini dan membuat pull request.
 
 Lisensi
-Proyek ini dilisensikan di bawah MIT License. Lihat file LICENSE untuk detailnya.
+Proyek ini dilisensikan di bawah MIT License.
